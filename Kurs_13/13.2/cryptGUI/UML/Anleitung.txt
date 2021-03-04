@@ -1,0 +1,8 @@
+Anleitung zum starten von UML-Diagrammen in Netbeans.
+
+1. Öffnen von Netbeans
+2. Import Projekt.
+3. Ordner >>UMLDiagrams<< unter (Standart) BG15DV\Kurs_13\13.2\cryptGUI\UML als neues Projekt importieren
+4. *cdg Datei ansehen
+
+Fertig

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="cryptGUI">
+  <ClassDiagramComponents>
+    <Class name="core" package="cryptGUI" visibility="public" xPosition="40.0" yPosition="20.0">
+      <Fields>
+        <Field name="RSA_algo" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="crypt_core" type="File" visibility="package" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="cmd_applet" returnType="Process" visibility="public" isStatic="true">
+          <Argument type="String" name="cmdkey"/>
+        </Method>
+        <Method name="Fileexist" returnType="boolean" visibility="public" isStatic="true"/>
+        <Method name="keychain" returnType="Process" visibility="public" isStatic="true"/>
+        <Method name="encrypt" returnType="Process" visibility="public" isStatic="true">
+          <Argument type="String" name="key"/>
+          <Argument type="String" name="iput"/>
+          <Argument type="String" name="oput"/>
+        </Method>
+        <Method name="decrypt" returnType="Process" visibility="public" isStatic="true">
+          <Argument type="String" name="key"/>
+          <Argument type="String" name="iput"/>
+          <Argument type="String" name="oput"/>
+        </Method>
+        <Method name="picker" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="popup" returnType="void" visibility="public" isStatic="true">
+          <Argument type="int" name="error_code"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="core"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GUI" package="cryptGUI" visibility="public" xPosition="571.0" yPosition="10.0">
+      <Fields>
+        <Field name="input_1" type="String" visibility="package"/>
+        <Field name="output_1" type="String" visibility="package"/>
+        <Field name="decrypt" type="java.awt.Button" visibility="private"/>
+        <Field name="encrypt" type="java.awt.Button" visibility="private"/>
+        <Field name="genkeys" type="java.awt.Button" visibility="private"/>
+        <Field name="head" type="java.awt.Label" visibility="private"/>
+        <Field name="input_bttn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="input_path1" type="java.awt.Label" visibility="private"/>
+        <Field name="input_pfad" type="java.awt.TextField" visibility="private"/>
+        <Field name="jDialog1" type="javax.swing.JDialog" visibility="private"/>
+        <Field name="jFrame1" type="javax.swing.JFrame" visibility="private"/>
+        <Field name="jFrame2" type="javax.swing.JFrame" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="output" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="output_bttn" type="javax.swing.JButton" visibility="private"/>
+        <Field name="output_path" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="output_pfad" type="java.awt.TextField" visibility="private"/>
+        <Field name="show_key" type="java.awt.Button" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="encryptActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="show_keyActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="genkeysActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="decryptActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="input_bttnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="output_bttnActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="refactor_key" package="cryptGUI" visibility="public" xPosition="47.0" yPosition="330.0">
+      <Fields>
+        <Field name="kill" type="javax.swing.JButton" visibility="private"/>
+        <Field name="priv_key_area" type="java.awt.TextField" visibility="private"/>
+        <Field name="pub_key" type="java.awt.Label" visibility="private"/>
+        <Field name="pub_key1" type="java.awt.Label" visibility="private"/>
+        <Field name="pub_key_area" type="java.awt.TextField" visibility="private"/>
+        <Field name="refresh" type="javax.swing.JButton" visibility="private"/>
+        <Field name="show_key" type="java.awt.Label" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="refreshActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="auslesen" returnType="Integer" visibility="public" isStatic="true">
+          <Argument type="Integer" name="i"/>
+        </Method>
+        <Method name="killActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="cryptGUI.core" target="cryptGUI.GUI"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Kursbildung">
+  <ClassDiagramComponents>
+    <Class name="lesen" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="User" type="ArrayList&lt;String&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Lesen" returnType="void" visibility="public"/>
+        <Method name="getUser" returnType="ArrayList&lt;String&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="lesen" type="lesen" visibility="package"/>
+        <Field name="TSK" type="TStammkurs" visibility="package"/>
+        <Field name="add" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel2" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jPanel3" type="javax.swing.JPanel" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="kurse" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="liste" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="load" type="javax.swing.JButton" visibility="private"/>
+        <Field name="newK" type="javax.swing.JButton" visibility="private"/>
+        <Field name="schueler" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="formWindowOpened" returnType="void" visibility="private">
+          <Argument type="java.awt.event.WindowEvent" name="evt"/>
+        </Method>
+        <Method name="loadActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="addActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="newKActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TSchueler" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="private" isFinal="true"/>
+        <Field name="Klasse" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="Name"/>
+          <Argument type="String" name="Klasse"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="TStammkurs" package="" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="Schuelerliste" type="ArrayList&lt;TSchueler&gt;" visibility="private" isFinal="true"/>
+        <Field name="Kursbezeichnung" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="addMember" returnType="void" visibility="public">
+          <Argument type="String" name="Name"/>
+        </Method>
+        <Method name="setKursbezeichnung" returnType="void" visibility="public">
+          <Argument type="String" name="Kursbezeichnung"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="lesen" source="Main" target="lesen" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="TSK" source="Main" target="TStammkurs" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Schuelerliste" source="TStammkurs" target="TSchueler" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;TSchueler&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
